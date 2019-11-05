@@ -1,24 +1,5 @@
 body {
     background: whitesmoke;
-
-    .test {
-        $size: 300px;
-        width: $size;
-        height: $size;
-        border: 1px solid grey;
-        background-color: burlywood;
-        animation: 2s fadeOutA infinite ease-in-out;
-    }
-}
-
-@keyframes fadeOutA {
-    0% {
-        opacity: 1;
-
-    }
-
-    100% {
-        opacity: 0;
-        top: -100px;
-    }
+    margin: 0px;
+    padding: 0px;
 }

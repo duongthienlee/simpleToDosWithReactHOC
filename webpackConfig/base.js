@@ -5,7 +5,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 const PATHS = {
-  input: path.join(__dirname, "/../src/")
+  input: path.join(__dirname, "../src/")
 };
 const config = {
   devtool: "source-map",
@@ -77,9 +77,9 @@ const config = {
         ],
       },
       {
-        test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
-        use: "url-loader"
-      },
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+        loader: 'url-loader?limit=100000'
+      }
     ]
   }
 };

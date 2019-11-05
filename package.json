@@ -40,19 +40,22 @@
     "prop-types": "^15.7.2",
     "rimraf": "^3.0.0",
     "sass-loader": "^7.2.0",
-    "url-loader": "^2.1.0",
+    "url-loader": "^2.2.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
+    "@material-ui/core": "^4.5.2",
+    "@material-ui/icons": "^4.5.1",
     "eslint": "6.1.0",
     "install-peerdeps": "^1.10.2",
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
+    "recompose": "^0.30.0",
     "webpack-merge": "^4.2.2"
   }
 }
