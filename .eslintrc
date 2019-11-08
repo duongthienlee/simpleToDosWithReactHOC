@@ -1,7 +1,8 @@
 {
   "extends": [
-      "airbnb/hooks",
-      "eslint:recommended"
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "plugins": [
       "react",
@@ -18,9 +19,7 @@
   "env": {
       "es6": true,
       "browser": true,
-      "node": true,
-      "jquery": true,
-      "mocha": true
+      "node": true
   },
   "rules": {
       "react/jsx-filename-extension": [

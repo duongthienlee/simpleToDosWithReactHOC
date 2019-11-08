@@ -8,12 +8,15 @@ export const theme = createMuiTheme({
             main: '#E0A458',
             dark: '#ab752b',
             contrastText: '#fff',
+
+
         },
         secondary: {
             light: '#ffffff',
             main: '#EBEBEB',
             dark: '#b9b9b9',
             contrastText: '#000',
+
         }
     },
     typography: {

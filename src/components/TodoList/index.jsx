@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { withConditionalRenderings } from './withConditionalRenderings'
 import {
-    List, ListItem, ListItemIcon,
-    ListItemText, ListItemSecondaryAction,
+    List, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction,
     Checkbox, IconButton
 } from '@material-ui/core';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import format from "date-fns/format";
 import { tickedTodo } from 'actions/todo'
 import { useDispatch } from 'react-redux'
 
@@ -21,6 +21,11 @@ const useStyles = makeStyles(theme => ({
         marginRight: 'auto',
         backgroundColor: theme.palette.background.paper,
     },
+    listItemText: {
+        fontSize: '1.2rem',
+        color: '#707070',
+        fontWeight: 'bold'
+    }
 }));
 
 
@@ -48,8 +53,11 @@ const TodoList = ({ todos }) => {
                                 disableRipple
                                 inputProps={{ 'aria-labelledby': labelId }}
                             />
+
                         </ListItemIcon>
-                        <ListItemText id={labelId} primary={todo.name} secondary={todo.time.toString()} />
+                        <ListItemText
+                            classes={{ primary: classes.listItemText }}
+                            id={labelId} primary={todo.name} secondary={format(todo.time, "EEE dd MM yyyy hh:mm a")} />
                         <ListItemSecondaryAction>
                             <IconButton size="small" edge="end" aria-label="crud">
                                 <MoreHorizIcon style={{ width: 32, height: 32 }} />

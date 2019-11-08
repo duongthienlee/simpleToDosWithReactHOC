@@ -47,7 +47,11 @@ const TodoAdd = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
     const [todo, setTodo] = useState('Type here')
-    const [selectedDate, handleDateChange] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState(new Date());
+
+    function handleDateChange(value) {
+        setSelectedDate(value)
+    }
 
     function handleSubmit() {
         let todoObj = { name: todo, time: selectedDate, done: false }
@@ -58,7 +62,7 @@ const TodoAdd = () => {
         e.preventDefault();
         setTodo(e.target.value)
     }
-    console.log("selectedDate", selectedDate.toString())
+
     return (
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <Paper className={classes.inputContainer}>
@@ -78,10 +82,9 @@ const TodoAdd = () => {
                         label="DateTimePicker"
                         inputVariant="outlined"
                         value={selectedDate}
-                        onChange={handleDateChange}
-                        onError={console.log}
-                        minDate={new Date("2018-01-01T00:00")}
-                        format="yyyy/MM/dd hh:mm a"
+                        onChange={(value) => handleDateChange(value)}
+                        minDate={new Date()}
+                        format="dd/MM/yyyy hh:mm a"
                         margin="normal"
                     />
                 </Paper>

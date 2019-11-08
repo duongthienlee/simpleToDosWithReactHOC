@@ -36,7 +36,7 @@ const App = () => {
       width: 60,
       height: 60,
       borderRadius: 10,
-      margin:5
+      margin: 5
     }
   }));
 
@@ -45,7 +45,7 @@ const App = () => {
 
   useEffect(() => {
     setLoaded(true)
-  }, [])
+  }, [setLoaded])
 
   const { todosArr } = useSelector(state => state.todos)
 

@@ -4,12 +4,12 @@ import update from 'immutability-helper';
 const initialState = {
     todosArr: [{
         name: 'Go To Metro Station',
-        time: new Date(),
+        time: new Date("Fri 08 Nov 2019 8:00"),
         done: true
     },
     {
         name: 'Study Programming at School',
-        time: new Date(),
+        time: new Date("Fri 08 Nov 2019 9:00"),
         done: false
     }]
 };
